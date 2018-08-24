@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Time Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pickr-widget/dist/pickr.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/pickr-widget/dist/pickr.min.js"></script>
+    <script src="Chart.bundle.js"></script>
+  </head>
+  <body>
+    <!-- Menu Bar -->      
+
+
+    <!-- Trackers and Chart Container -->
+    <div id="trackersAndChartContainer">
+      <div id="trackersContainer">
+        <div><button id="addTracker">add tracker</button></div>
+      </div>
+      <div id="canvasContainer">
+        <canvas id="mycanvas" width="600" height="600"></canvas>
+      </div>
+    </div>
+
+    <form id="addForm" class="hidden">
+      <div id="titleInput">
+        <label for="title">Title:</label>
+        <input name="title" type="text" id="title" required>
+      </div>
+      <div id="colourPickerContainer"><label for="colour">Colour:</label>
+        <div id="colourPicker"></div>
+      </div>
+      <div id="submitCancelContainer">
+        <button name="submit" id="submit" type="button">Submit</button>
+        <button name="edit" id="edit" type="button">Submit</button>
+        <button name="cancel" id="cancel" type="button">Cancel</button>
+      </div>
+    </form>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
