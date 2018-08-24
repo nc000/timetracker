@@ -1,11 +1,6 @@
 "use strict";
 
 // ******** Create doughnut chart object ******** //
-if (window.innerWidth < 768) {
-  mycanvas.height = "300";
-  mycanvas.width = "300";
-};
-
 let chrt = document.getElementById("mycanvas").getContext("2d");
 let doughnutChart = new Chart(chrt, {
   type: 'doughnut',
