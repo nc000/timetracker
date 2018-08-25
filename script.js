@@ -69,7 +69,7 @@ function createTrackerObject(name, colour) {
 
 // ****HELPER FUNCTIONS**** //
 function playPauseButtonClick(event) {
-  let button = event.target;
+  let button = event.currentTarget;
   if (this.stopped) {
     this.stopped = false;
     button.innerHTML = `<i class="fas fa-pause"></i>`
