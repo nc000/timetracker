@@ -1,5 +1,6 @@
-body {
+html, body {
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -24,6 +25,10 @@ div#trackersAndChartContainer {
   font-size: 40px;
 }
 
+.tracker > span {
+  font-family: 'Roboto', sans-serif;
+}
+
 .tracker > span:first-of-type {
   flex-basis: 60%;
   overflow: hidden;
@@ -43,6 +48,7 @@ div#trackersAndChartContainer {
   text-decoration: none;
   background: transparent;
   transition: all 0.2s;
+  outline: none;
 }
 
 .tracker > button:hover {
@@ -69,21 +75,19 @@ button.delete:hover {
   text-decoration: none;
   background: transparent;
   color: rgb(107, 107, 107);
-  border: 5px dashed rgb(219, 219, 219);
+  border: 2px solid rgb(219, 219, 219);
+  border-radius: 5px;
   font-size: 40px;
   padding: 5px;
   margin: 10px 0 60px 0;
   transition: all 0.2s;
+  outline: none;
 }
 
 #addTracker:hover {
   color: black;
   border-color: black;
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }
 
 #coverDiv {
@@ -98,15 +102,21 @@ button.delete:hover {
 }
 
 #addForm {
-  background: rgb(245, 245, 245);
-  border: 1px solid rgb(209, 209, 209);
-  position: absolute;
+  background: #fff;
+  border-top: 6px solid #3994df;
+  position: fixed;
   width: 300px;
+  height: 250px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   z-index: 999;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .25s, visibility .25s;
 }
 
 #addForm > div, #addForm #submitCancelContainer {
@@ -116,36 +126,59 @@ button.delete:hover {
   padding: 10px;
 }
 
+#addForm #formTitleContainer {
+  width: 100%;
+  padding: 5px 0 5px 0;
+  background: #3994df;
+}
+
+#addForm #formTitleContainer h1 {
+  width: 70%;
+  margin: 0 auto;
+  color: hsla(0, 0%, 100%, 0.86);;
+  font-size: 20px;
+  padding: 0;
+}
+
+#addForm input {
+  height: 20px;
+  outline: none;
+  box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.08);
+}
+
 #addForm input:invalid {
   border: 1px solid red;
 }
 
-#addFOrm input:valid {
+#addForm input:valid {
   border: 2px solid black;
 }
 
 #addForm button {
-  border: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
   width: 100px;
   height: 30px;
+  font-size: 15px;
   transition: all 0.1s;
 }
 
 #addForm #submit, #addForm #edit {
-  background: rgb(155, 219, 155);
+  color: hsla(0, 0%, 100%, 0.86);
+  background: #3994df;
   padding-right: 10px;
 }
 
 #addForm #submit:hover,  #addForm #edit:hover{
-  background: rgb(124, 214, 124);
+  background: #0077d8;
 }
 
 #addForm #cancel {
-  background: rgb(235, 153, 153);
+  background: rgb(253, 239, 239);
 }
 
 #addForm #cancel:hover {
-  background: rgb(230, 115, 115);
+  background: rgb(219, 135, 135);
 }
 
 #canvasContainer {

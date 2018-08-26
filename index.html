@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pickr-widget/dist/pickr.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/pickr-widget/dist/pickr.min.js"></script>
     <script src="Chart.bundle.js"></script>
   </head>
@@ -26,6 +27,9 @@
     </div>
 
     <form id="addForm" class="hidden">
+      <div id="formTitleContainer">
+        <h1></h1>
+      </div>
       <div id="titleInput">
         <label for="title">Title:</label>
         <input name="title" type="text" id="title" required>

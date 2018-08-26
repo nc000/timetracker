@@ -146,11 +146,16 @@ addTracker.onclick = function(event) {
 function showForm(type) {
   createCover();
   if (type == "edit") {
+    formTitleContainer.firstElementChild.innerHTML = "Edit Tracker";
     setDefaultValues.call(this, type);
     addForm.edit.onclick = editSubmitClick.bind(this); // Update the context
   } else {
+    formTitleContainer.firstElementChild.innerHTML = "Add Tracker";
     setDefaultValues(type);
   }
+  
+  addForm.style.visibility = "visible";
+  addForm.style.opacity = "1";
 }
 
 // **** Add event handlers to buttons **** //
@@ -189,13 +194,11 @@ function setDefaultValues(type) {
     addForm.submit.style.display = "none";
     addForm.edit.style.display = "";
   }
-  addForm.classList.remove("hidden");
 }
 
 function createCover() {
   let coverDiv = document.createElement("div");
   coverDiv.id = "coverDiv";
-  document.body.style.overflowY = "hidden";
   document.body.append(coverDiv);
 }
 
@@ -231,10 +234,10 @@ function editSubmitClick(event) {
 
 function closeForm(event) {
   removeCover();
-  addForm.classList.add("hidden");
+  addForm.style.visibility = "hidden";
+  addForm.style.opacity = "0";
 
   function removeCover() {
-    document.body.style.overflowY = "";
     coverDiv.remove();
   }
 }
@@ -247,12 +250,8 @@ function closeForm(event) {
 // ******** Update the values of the chart ******** //
 function updateChart() {
   setTimeout(() => {
-    // let aTrackerIsOn = trackers.length > 0 && trackers.reduce((trackerA, boolean) => trackerA.startTime || boolean);
-    // if (aTrackerIsOn) {
-      updateDatasetsAndLabels();
-      doughnutChart.update();
-    // }
-
+    updateDatasetsAndLabels();
+    doughnutChart.update();
     updateChart();
   }, 1000)
 
