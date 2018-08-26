@@ -5,6 +5,10 @@ Time tracker is a simple website for tracking how you spend your time.
 * Can add as many trackers as you want
 * A doughnut chart to visualise the time you have spent
 
+## Libraries Used
+* [Chart.js](http://www.chartjs.org/)
+* [Pickr](https://simonwep.github.io/pickr/)
+
 ## Installation
 1. Download the .html, .js and .css files
 2. Load the index.html file in a browser
