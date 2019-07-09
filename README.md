@@ -23,7 +23,7 @@ Time tracker is a simple website for tracking how you spend your time.
 * The delete button removes the tracker from the list and doughnut chart
 
 ### Doughnut Chart
-* The doughnut chart updates automatically to reflect on the proportion of time spent on each tracker
+* The doughnut chart updates automatically to reflect the proportion of time spent on each tracker
 
 ## License
 [GNU](https://choosealicense.com/licenses/gpl-3.0/)
